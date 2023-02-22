@@ -1,0 +1,76 @@
+/* Start Import Styles */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* End Import Styles */
+
+/* Start Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* End Universal Styles */
+
+/* Start Header Styles */
+.page-header h1{
+    background-color: #145f94;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    padding: 34px;
+    font-weight: 500;
+}
+
+/* End Header Styles */
+
+/* Start Wrapper Styles */
+.television-wrapper {
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.television-wrapper-left {
+    width: 60%;
+    float: left;
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+.television-wrapper-right {
+    width: 40%;
+    float: right;
+    padding: 20px 0;
+    margin-bottom: 80px;
+}
+
+/* End Wrapper Styles */
+
+/* Start Card Styles */
+.tv-card {
+    border: 1px solid #145f94;
+}
+
+.tv-card-head {
+    background-color: #145f94;
+    color: white;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tv-card-content {
+    text-align: justify;
+    padding: 25px;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+    background-color: hsl(0deg 0% 96%);
+}
+
+.tv-2,
+.tv-5 {
+    margin: 20px 0;
+}
+
+/* End Card Styles */
