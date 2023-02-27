@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Kids</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- Start Main Container -->
+    <div class="main-wrapper">
+      <!-- Start Header -->
+      <header class="main-header">
+        <div class="head-title head-title-left">MATH KIDS</div>
+        <div class="head-title head-title-right">KIDS LEARNING APP</div>
+      </header>
+      <!-- End Header -->
+      <!-- Start Main Content -->
+
+      <!-- Start Main Content 1 -->
+      <section class="main-content">
+        <div class="content-title">
+          <h1>1. Choose a Shape</h1>
+        </div>
+        <!-- Start Shapes -->
+        <div class="content-shapes">
+          <div class="shapes shape-1" data-shape="Circle" data-no="0">
+            <div>
+              <i></i>
+            </div>
+          </div>
+          <div
+            class="shapes shape-2"
+            data-shape="Equilateral Triangle"
+            data-no="1"
+          >
+            <div>
+              <i></i>
+            </div>
+          </div>
+          <div class="shapes shape-3" data-shape="Square" data-no="2">
+            <div>
+              <i></i>
+            </div>
+          </div>
+        </div>
+        <!-- End Shapes -->
+        <div class="content-button">
+          <button id="choose-shape">NEXT</button>
+        </div>
+      </section>
+      <!-- End Main Content 1 -->
+
+      <!-- Start Main Content 2 -->
+      <section class="main-content main-content-2">
+        <div class="content-title">
+          <h1 class="side-details-title">2. Enter Side</h1>
+        </div>
+        <div class="size-input-wrapper">
+          <input type="number" class="size-input-box" />
+        </div>
+        <div class="content-button">
+          <button id="choose-calculate">CALCULATE</button>
+        </div>
+      </section>
+      <!-- End Main Content 2 -->
+
+      <!-- Start Main Content 3 -->
+      <section class="main-content main-content-3">
+        <div class="result-shape">
+          <div class="shapes"></div>
+        </div>
+        <div class="result-title">
+          <h1></h1>
+        </div>
+
+        <div class="content-result">
+          <table id="result">
+            <tr>
+              <td class="formula-name"></td>
+              <td class="formula"></td>
+              <td class="formula-result"></td>
+            </tr>
+            <tr>
+              <td class="formula-name">AREA</td>
+              <td class="formula"></td>
+              <td class="formula-result"></td>
+            </tr>
+            <tr>
+              <td class="formula-name">PERIMETER</td>
+              <td class="formula"></td>
+              <td class="formula-result"></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="content-button">
+          <button id="choose-try">START AGAIN</button>
+        </div>
+      </section>
+      <!-- End Main Content 3 -->
+
+      <!-- End Main Content -->
+    </div>
+    <!-- End Main Container -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
