@@ -11,11 +11,13 @@ if (localStorage.getItem("shapeData")) {
         document.getElementsByClassName("main-content")[0].classList.add("main-content-1");
         document.getElementsByClassName("main-content")[1].classList.remove("main-content-2");
         document.getElementsByClassName("main-content")[2].classList.add("main-content-3");
+        renderSidePage();
     }
     else {
         document.getElementsByClassName("main-content")[0].classList.add("main-content-1");
         document.getElementsByClassName("main-content")[1].classList.add("main-content-2");
         document.getElementsByClassName("main-content")[2].classList.remove("main-content-3");
+        renderResultPage();
     }
 }
 
@@ -129,6 +131,26 @@ calculateBtn.addEventListener("click", () => {
 });
 
 /*
+@description -  Stores Final Results in Local Storage
+@params - shapeData, formulaResult1, formulaResult2, formulaResult3
+*/
+function setFinalResult(shapeData, formulaResult1, formulaResult2, formulaResult3) {
+    localStorage.setItem(
+        "shapeData",
+        JSON.stringify({
+            shape: shapeData.shape,
+            shapeNo: shapeData.shapeNo,
+            pageNo: 2,
+            side: shapeData.inputValue,
+            formulaResult1,
+            formulaResult2,
+            formulaResult3,
+        })
+    );
+
+}
+
+/*
 @description -  Render Page 3 with Data's in Local Storage
 @params - null
 */
@@ -154,6 +176,9 @@ function renderResultPage() {
         formulaResult[0].innerText = shapeData.side + " cm";
         formulaResult[1].innerText = (Math.PI * (shapeData.side ^ 2)).toFixed(2) + " sq cm";
         formulaResult[2].innerText = (2 * Math.PI * shapeData.side).toFixed(2) + "cm";
+
+        setFinalResult(shapeData, shapeData.side, (Math.PI * (shapeData.side ^ 2)).toFixed(2), (2 * Math.PI * shapeData.side).toFixed(2));
+
     }
     // Dynamic Rendering For Shape Triangle
     else if (shapeData.shapeNo == 1) {
@@ -169,6 +194,9 @@ function renderResultPage() {
         formulaResult[0].innerText = shapeData.side + " cm";
         formulaResult[1].innerText = (0.433 * shapeData.side * shapeData.side).toFixed(2) + " sq cm";
         formulaResult[2].innerText = (3 * shapeData.side).toFixed(2) + "cm";
+
+        setFinalResult(shapeData, shapeData.side, (0.433 * shapeData.side * shapeData.side).toFixed(2), (3 * shapeData.side).toFixed(2));
+
     }
     // Dynamic Rendering For Shape Square
     else {
@@ -184,6 +212,8 @@ function renderResultPage() {
         formulaResult[0].innerText = shapeData.side + " cm";
         formulaResult[1].innerText = (shapeData.side * shapeData.side).toFixed(2) + " sq cm";
         formulaResult[2].innerText = (4 * shapeData.side).toFixed(2) + "cm";
+
+        setFinalResult(shapeData, shapeData.side, (shapeData.side * shapeData.side).toFixed(2), (4 * shapeData.side).toFixed(2));
     }
 }
 
