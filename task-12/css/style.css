@@ -120,6 +120,10 @@
   margin-top: 60px;
 }
 
+.hide{
+  display: none;
+}
+
 .content-button button {
   cursor: pointer;
 }

@@ -6,6 +6,7 @@ if (localStorage.getItem("shapeData")) {
         document.getElementsByClassName("main-content")[1].classList.add("main-content-2");
         document.getElementsByClassName("main-content")[2].classList.add("main-content-3");
         document.getElementsByClassName("shapes")[shapeData.shapeNo].getElementsByTagName("i")[0].classList.add("fa-solid", "fa-check");
+        document.getElementsByClassName("content-button")[0].classList.remove("hide");
     }
     else if (shapeData.pageNo == 1) {
         document.getElementsByClassName("main-content")[0].classList.add("main-content-1");
@@ -52,6 +53,7 @@ function shapeClicked(event) {
         );
         event.target.getElementsByTagName("i")[0].classList.add("fa-solid", "fa-check");
     }
+    document.getElementsByClassName("content-button")[0].classList.remove("hide");
 }
 
 // Adds click event listener to the shapes
@@ -140,8 +142,8 @@ function setFinalResult(shapeData, formulaResult1, formulaResult2, formulaResult
         JSON.stringify({
             shape: shapeData.shape,
             shapeNo: shapeData.shapeNo,
-            pageNo: 2,
-            side: shapeData.inputValue,
+            pageNo: shapeData.pageNo,
+            side: shapeData.side,
             formulaResult1,
             formulaResult2,
             formulaResult3,
@@ -229,5 +231,6 @@ chooseTry.addEventListener("click", () => {
     // Hiding Page 3 and Displaying Page 1
     document.getElementsByClassName("main-content")[2].classList.add("main-content-3");
     document.getElementsByClassName("main-content")[0].classList.remove("main-content-1");
+    document.getElementsByClassName("content-button")[0].classList.add("hide");
     document.getElementsByClassName("size-input-box")[0].value = "";
 })
