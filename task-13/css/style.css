@@ -13,9 +13,9 @@
 
 /* Header Title */
 .head-title {
-  padding: 36px;
+  padding: 36px 40px;
   color: #ffffff;
-  font-size: 23px;
+  font-size: 1.43rem;
   letter-spacing: 1.5px;
   font-weight: 100;
 }
@@ -23,16 +23,15 @@
 /* Card Wrapper */
 .card-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  width: 93%;
-  margin: 50px auto;
+  width: calc(100% - 186px);
+  margin: 68px auto;
 }
 
 /* Card */
 .card {
-  width: 31.3333333%;
+  width: calc((100% / 3) - 14px);
   background-color: #5266af;
   padding: 20px;
   margin: 7px;
@@ -50,7 +49,7 @@
 
 /* Name & Email Wrapper */
 .text-content-wrapper {
-  margin-left: 20px;
+  margin-left: 22px;
   color: white;
 }
 
