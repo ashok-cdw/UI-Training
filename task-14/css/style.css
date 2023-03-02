@@ -1,0 +1,132 @@
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Main Page Wrapper */
+.page-wrapper {
+  background-color: rgb(245, 245, 245);
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* Header Page Logo */
+.page-logo {
+  display: flex;
+  justify-content: center;
+  width: 16%;
+  margin: 0 auto;
+}
+
+.page-logo img {
+  margin-top: -40px;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+  background-color: #ffffff;
+  width: 630px;
+  padding: 36px;
+  margin: 0 auto;
+  margin-top: -40px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 4px #dfdfdf, -1px 1px 4px #dfdfdf;
+}
+
+.page-form {
+  width: 100%;
+}
+
+/* Form Heading */
+.page-heading {
+  margin-top: 3px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #071b6d;
+  letter-spacing: 1px;
+}
+
+/* Name Section */
+.name-section {
+  padding-top: 37px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Wrapper Input Selectors */
+.wrapper {
+  position: relative;
+  padding: 10px 0;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.spacer {
+  margin-top: 22px;
+}
+
+/* Form Label */
+.form-label {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+
+/* Form Label Error */
+.form-label-error {
+  font-size: 0.625rem;
+  color: #9a1e14;
+  padding-top: 6px;
+}
+
+/* Form Input */
+.form-input {
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  height: 45px;
+  width: 100%;
+  outline: none;
+  padding: 0 10px;
+}
+
+/* Form Input Error */
+.form-input-error {
+  border: 1px solid rgb(154, 30, 20);
+}
+
+/* Input Width */
+#first-name,
+#last-name,
+#cvv,
+#card-expiry-year {
+  width: 268px;
+}
+
+/* Card Details Section */
+.card-details-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Page Heading */
+.page-heading-payment {
+  margin: 30px 0;
+}
+
+/* Payment Button */
+.payment-btn input {
+  background-color: #071b6d;
+  color: #ffffff;
+  height: 45px;
+  width: 100%;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
