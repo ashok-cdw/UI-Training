@@ -13,7 +13,7 @@
 
 /* Page Header */
 .main-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -22,6 +22,7 @@
   height: 72px;
   background-color: #b5df91;
   width: 100vw;
+  padding: 0 35px;
 }
 
 /* Page Header Title */
@@ -29,14 +30,6 @@
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 20px;
-}
-
-.head-title-left {
-  padding-left: 30px;
-}
-
-.head-title-right {
-  padding-right: 30px;
 }
 
 /* Page Content */
@@ -89,13 +82,13 @@
 }
 
 /* Individual Shapes */
-.shape-1 {
+#circle {
   border-radius: 50%;
   background-color: #43967d;
   position: relative;
 }
 
-.shape-2 {
+#triangle {
   width: 0;
   height: 0;
   border-left: 80px solid transparent;
@@ -104,13 +97,13 @@
   position: relative;
 }
 
-.shape-2 i {
+#triangle i {
   position: absolute;
   top: 70px;
   left: -35px;
 }
 
-.shape-3 {
+#square {
   background-color: rgb(224, 224, 224);
 }
 
@@ -227,14 +220,6 @@
 }
 
 /* Hiding Sections */
-.main-content-1 {
-  display: none;
-}
-
-.main-content-2 {
-  display: none;
-}
-
-.main-content-3 {
+.hidden {
   display: none;
 }

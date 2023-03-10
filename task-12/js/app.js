@@ -1,36 +1,35 @@
 // Shape Data
 const shapes = {
     shape: "",
-    shapeNo: 0,
     side: 0,
 };
 
 let circle = {
-    shapeId: "shape-1",
+    shapeId: "Circle",
     formulaName: "RADIUS",
-    formula0: "r",
-    formula1: "0.433 <sup>*</sup> s <sup>*</sup> s",
-    formula2: "2&pi;r",
-    result2: () => (Math.PI * (shapes.side ^ 2)).toFixed(2),
-    result3: () => (2 * Math.PI * shapes.side).toFixed(2),
+    side: "r",
+    area: "0.433 <sup>*</sup> s <sup>*</sup> s",
+    perimeter: "2&pi;r",
+    areaResult: () => (Math.PI * (shapes.side ^ 2)).toFixed(2),
+    perimeterResult: () => (2 * Math.PI * shapes.side).toFixed(2),
 }
 let triangle = {
-    shapeId: "shape-2",
+    shapeId: "Equilateral Triangle",
     formulaName: "SIDE",
-    formula0: "s",
-    formula1: "&pi;r<sup>2</sup>",
-    formula2: "3 * s",
-    result2: () => (0.433 * shapes.side * shapes.side).toFixed(2),
-    result3: () => (3 * shapes.side).toFixed(2),
+    side: "s",
+    area: "&pi;r<sup>2</sup>",
+    perimeter: "3 * s",
+    areaResult: () => (0.433 * shapes.side * shapes.side).toFixed(2),
+    perimeterResult: () => (3 * shapes.side).toFixed(2),
 }
 let square = {
-    shapeId: "shape-3",
+    shapeId: "Square",
     formulaName: "SIDE",
-    formula0: "s",
-    formula1: "s <sup>*</sup> s",
-    formula2: "4 <sup>*</sup> s",
-    result2: () => (Math.PI * (shapes.side ^ 2)).toFixed(2),
-    result3: () => (2 * Math.PI * shapes.side).toFixed(2),
+    side: "s",
+    area: "s <sup>*</sup> s",
+    perimeter: "4 <sup>*</sup> s",
+    areaResult: () => (Math.PI * (shapes.side ^ 2)).toFixed(2),
+    perimeterResult: () => (2 * Math.PI * shapes.side).toFixed(2),
 }
 
 
@@ -41,15 +40,13 @@ let square = {
 */
 function shapeClicked(event) {
     console.log(event.target);
-    if (shapes.shape != "" && event.target.getAttribute("data-shape") != null && event.target.getAttribute("data-shape") != shapes.shape) {
-        document.getElementsByClassName("shapes")[shapes.shapeNo].querySelector("i").classList.remove("fa-solid", "fa-check");
+    if (shapes.shape != "" && event.target.getAttribute("id") != shapes.shape) {
+        document.querySelector(`.shapes#${shapes.shape} i`).classList.remove("fa-solid", "fa-check");
         event.target.querySelector("i").classList.add("fa-solid", "fa-check");
-        shapes.shape = event.target.getAttribute("data-shape");
-        shapes.shapeNo = event.target.getAttribute("data-no");
+        shapes.shape = event.target.getAttribute("id");
     }
     else {
-        shapes.shape = event.target.getAttribute("data-shape");
-        shapes.shapeNo = event.target.getAttribute("data-no");
+        shapes.shape = event.target.getAttribute("id");
         event.target.querySelector("i").classList.add("fa-solid", "fa-check");
     }
     document.querySelector(".content-button").classList.remove("hide");
@@ -66,8 +63,8 @@ for (const shape of chooseShapes) {
 let chooseBtn = document.getElementById("choose-shape");
 chooseBtn.addEventListener("click", () => {
     // Hiding Page 1 and Displaying Page 2
-    document.getElementsByClassName("main-content")[0].classList.add("main-content-1");
-    document.getElementsByClassName("main-content")[1].classList.remove("main-content-2");
+    document.getElementsByClassName("main-content")[0].classList.add("hidden");
+    document.getElementsByClassName("main-content")[1].classList.remove("hidden");
     renderSideInputPage();
 });
 
@@ -77,10 +74,10 @@ chooseBtn.addEventListener("click", () => {
 */
 function renderSideInputPage() {
     let sideTitle = document.querySelector(".side-details-title");
-    if (shapes.shapeNo == 0) {
+    if (shapes.shape === "circle") {
         sideTitle.innerText = "2. Enter Radius";
     }
-    else if (shapes.shapeNo == 1) {
+    else if (shapes.shape === "triangle") {
         sideTitle.innerText = "2. Enter Side (Base & Height)";
     }
     else {
@@ -94,14 +91,14 @@ calculateBtn.addEventListener("click", () => {
     let inputBox = document.querySelector(".size-input-box");
     let inputValue = inputBox.value;
     // Validating Input
-    if (inputValue == "" || isNaN(inputValue)) {
+    if (inputValue === "" || isNaN(inputValue)) {
         alert("Invalid Input");
     }
     else {
         shapes.side = inputValue;
         // Hiding Page 2 and Displaying Page 3
-        document.getElementsByClassName("main-content")[1].classList.add("main-content-2");
-        document.getElementsByClassName("main-content")[2].classList.remove("main-content-3");
+        document.getElementsByClassName("main-content")[1].classList.add("hidden");
+        document.getElementsByClassName("main-content")[2].classList.remove("hidden");
         renderResultPage();
     }
 });
@@ -117,16 +114,16 @@ function updateResultData(shape) {
     let formulaNameDiv = document.querySelectorAll(".formula-name")[0];
     let formula = document.querySelectorAll(".formula");
     let formulaResult = document.querySelectorAll(".formula-result");
-    resultShape.classList.add(shape.shapeId);
-    resultTitle.innerText = shapes.shape;
+    resultShape.setAttribute("id",shapes.shape);
+    resultTitle.innerText = shape.shapeId;
     formulaNameDiv.innerText = shape.formulaName;
-    formula[0].innerText = shape.formula0;
-    formula[1].innerHTML = shape.formula1;
-    formula[2].innerHTML = shape.formula2;
+    formula[0].innerText = shape.side;
+    formula[1].innerHTML = shape.area;
+    formula[2].innerHTML = shape.perimeter;
 
     formulaResult[0].innerText = shapes.side + " cm";
-    formulaResult[1].innerText = shape.result2() + " sq cm";
-    formulaResult[2].innerText = shape.result3() + "cm";
+    formulaResult[1].innerText = shape.areaResult() + " sq cm";
+    formulaResult[2].innerText = shape.perimeterResult() + "cm";
 }
 
 
@@ -137,11 +134,11 @@ function updateResultData(shape) {
 function renderResultPage() {
 
     // Dynamic Rendering For Shape Circle
-    if (shapes.shapeNo == 0) {
+    if (shapes.shape === "circle") {
         updateResultData(circle);
     }
     // Dynamic Rendering For Shape Triangle
-    else if (shapes.shapeNo == 1) {
+    else if (shapes.shape === "triangle") {
         updateResultData(triangle);
     }
     // Dynamic Rendering For Shape Square
@@ -153,5 +150,10 @@ function renderResultPage() {
 // Try Again Button Listener
 let chooseTry = document.querySelector("#choose-try");
 chooseTry.addEventListener("click", () => {
-    location.reload();
+    document.querySelector(`.shapes#${shapes.shape} i`).classList.remove("fa-solid", "fa-check");
+    document.querySelector(".size-input-box").value = "";
+    shapes.shape = "";
+    shapes.side = 0;
+    document.getElementsByClassName("main-content")[0].classList.remove("hidden");
+    document.getElementsByClassName("main-content")[2].classList.add("hidden");
 })
