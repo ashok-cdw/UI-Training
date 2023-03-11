@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Roboto+Condensed:wght@300;400;700&display=swap");
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-container {
+  width: 80%;
+  color: #ffffff;
+  position: relative;
+}
+
+.portfolio-email {
+  display: flex;
+  justify-content: flex-end;
+}
+.portfolio-email h3 {
+  padding: 70px 0;
+  font-size: 25px;
+}
+
+.portfolio-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio-description h1 {
+  padding-top: 40px;
+  font-size: 150px;
+  font-weight: 100;
+}
+.portfolio-description h1 span {
+  font-weight: 800;
+}
+.portfolio-description h2 {
+  color: #cecece;
+  font-size: 50px;
+  padding-top: 10px;
+}
+.portfolio-description h2 span {
+  color: #5b8edc;
+}
+
+.portfolio-products-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 130px;
+}
+.portfolio-products-container .portfolio-products {
+  width: calc((100% - 60px) / 3);
+}
+.portfolio-products-container .portfolio-products img {
+  width: 100%;
+}
+
+.portfolio-companies-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0 50px 0;
+}
+.portfolio-companies-title h2 {
+  color: #cecece;
+  font-size: 40px;
+  text-align: center;
+}
+.portfolio-companies-title span {
+  color: #c2e791;
+}
+
+.portfolio-companies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 60px;
+}
+.portfolio-companies .portfolio-company-images {
+  text-align: center;
+}
+.portfolio-companies img {
+  padding: 20px;
+  width: 70%;
+}
+
+.portfolio-dash {
+  display: flex;
+  justify-content: center;
+  margin: 140px 0;
+}
+.portfolio-dash div:first-child {
+  margin-right: 40px;
+  width: 3%;
+  height: 1.5px;
+  background-color: #ffffff;
+}
+.portfolio-dash div:last-child {
+  width: 16%;
+  height: 1.5px;
+  background-color: #ffffff;
+}
+
+.portfolio-social-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 30px;
+  width: 30%;
+  margin: 0 auto;
+}
+.portfolio-social-icons div {
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-footer {
+  margin: 100px 0 140px 0;
+  display: flex;
+  justify-content: center;
+}
+.portfolio-footer p {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 992px) {
+  .portfolio-container {
+    margin-top: 200px;
+  }
+  .portfolio-email {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    justify-content: center;
+  }
+  .portfolio-email h3 {
+    font-size: 20px;
+  }
+  .portfolio-description h1 {
+    font-size: 55px;
+  }
+  .portfolio-description h2 {
+    font-size: 30px;
+  }
+  .portfolio-products {
+    width: 100%;
+    padding: 7px 0;
+  }
+  .portfolio-products-container {
+    gap: 0;
+  }
+  .portfolio-companies-title h2 {
+    font-size: 30px;
+  }
+  .portfolio-companies {
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .portfolio-companies img {
+    width: 100px;
+    padding: 5px;
+    margin: 30px 0;
+  }
+  .portfolio-company-images {
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+  }
+  .portfolio-dash {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .portfolio-dash div:first-child {
+    width: 8%;
+    height: 1.5px;
+    background-color: #ffffff;
+  }
+  .portfolio-dash div:last-child {
+    width: 50%;
+    height: 1.5px;
+    background-color: #ffffff;
+  }
+  .portfolio-social-icons {
+    width: 100%;
+  }
+  .portfolio-social-icons div {
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+  }
+  .portfolio-footer {
+    margin: 40px 0;
+  }
+  .portfolio-footer p {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

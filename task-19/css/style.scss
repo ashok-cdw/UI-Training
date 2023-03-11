@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+// Color Variables
+$bg-color: #000000;
+$white-color: #ffffff;
+$grey-color: #cecece;
+$blue-color: #5b8edc;
+$green-color: #c2e791;
+
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+// Body
+body {
+  background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+}
+
+// Portfolio Container
+.portfolio-container {
+  width: 80%;
+  color: $white-color;
+  position: relative;
+}
+
+// Portfolio Email
+.portfolio-email {
+  display: flex;
+  justify-content: flex-end;
+
+  h3 {
+    padding: 70px 0;
+    font-size: 25px;
+  }
+}
+
+// Portfolio Description
+.portfolio-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    padding-top: 40px;
+    font-size: 150px;
+    font-weight: 100;
+
+    span {
+      font-weight: 800;
+    }
+  }
+
+  h2 {
+    color: $grey-color;
+    font-size: 50px;
+    padding-top: 10px;
+
+    span {
+      color: $blue-color;
+    }
+  }
+}
+
+// Portfolio Products Wrapper
+.portfolio-products-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 130px;
+
+  .portfolio-products {
+    width: calc((100% - 60px) / 3);
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// Portfolio Companies
+.portfolio-companies-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0 50px 0;
+
+  h2 {
+    color: $grey-color;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  span {
+    color: $green-color;
+  }
+}
+
+.portfolio-companies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 60px;
+
+  .portfolio-company-images {
+    text-align: center;
+  }
+
+  img {
+    padding: 20px;
+    width: 70%;
+  }
+}
+
+// Portfolio Dash Lines
+.portfolio-dash {
+  display: flex;
+  justify-content: center;
+  margin: 140px 0;
+
+  div:first-child {
+    margin-right: 40px;
+    width: 3%;
+    height: 1.5px;
+    background-color: $white-color;
+  }
+
+  div:last-child {
+    width: 16%;
+    height: 1.5px;
+    background-color: $white-color;
+  }
+}
+
+// Portfolio Social Icons
+.portfolio-social-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 30px;
+  width: 30%;
+  margin: 0 auto;
+
+  div {
+    border: 1px solid $white-color;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Portfolio Footer
+.portfolio-footer {
+  margin: 100px 0 140px 0;
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 992px) {
+  // Portfolio Container
+  .portfolio-container {
+    margin-top: 200px;
+  }
+
+  // Portfolio Email
+  .portfolio-email {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    justify-content: center;
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  // Portfolio Description
+  .portfolio-description {
+    h1 {
+      font-size: 55px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  // Portfolio Products Wrapper
+  .portfolio-products {
+    width: 100%;
+    padding: 7px 0;
+  }
+
+  .portfolio-products-container {
+    gap: 0;
+  }
+
+  .portfolio-companies-title h2 {
+    font-size: 30px;
+  }
+
+  // Portfolio Companies
+  .portfolio-companies {
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    img {
+      width: 100px;
+      padding: 5px;
+      margin: 30px 0;
+    }
+  }
+
+  .portfolio-company-images {
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  // Portfolio Dash Lines
+  .portfolio-dash {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+
+    div:first-child {
+      width: 8%;
+      height: 1.5px;
+      background-color: $white-color;
+    }
+
+    div:last-child {
+      width: 50%;
+      height: 1.5px;
+      background-color: $white-color;
+    }
+  }
+
+  // Portfolio Social Icons
+  .portfolio-social-icons {
+    width: 100%;
+
+    div {
+      margin: 0 5px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  // Portfolio Footer
+  .portfolio-footer {
+    margin: 40px 0;
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
