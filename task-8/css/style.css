@@ -1,0 +1,156 @@
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Main Container */
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url("../assests/images/background-image.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #c0c0c0;
+  background-blend-mode: multiply;
+}
+
+/* Sidebar */
+.sidebar {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100px;
+  height: 90px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar i {
+  color: #ffffff;
+  font-size: 30px;
+  transition: all 1s;
+}
+
+/* Sidebar Panel */
+.side-container {
+  position: absolute;
+  left: 0px;
+  top: 90px;
+  width: 270px;
+  background-color: #000000;
+  height: 760px;
+  border-radius: 0 30px 30px 0;
+  display: flex;
+  justify-content: center;
+  margin-left: -300px;
+  transition: all 1s;
+}
+
+.sidebar:hover.sidebar i{
+  transform: rotate(180deg);
+}
+
+.sidebar:hover .side-container {
+  margin-left: 0;
+}
+
+.side-container div {
+  height: 100px;
+  margin-top: 50px;
+}
+
+.side-container ul {
+  position: absolute;
+  top: 140px;
+  left: 67px;
+  height: 500px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.side-container li {
+  padding-top: 24px;
+}
+
+.side-container a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Main Heading */
+.main-heading {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.main-heading h1 {
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  font-size: 90px;
+}
+
+/* Section Year */
+
+.hats-since {
+  position: absolute;
+  top: 188px;
+  right: -127px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transform: rotate(270deg);
+}
+
+.hats-since h1::after {
+  content: " 1867";
+  font-size: 100px;
+  letter-spacing: 7px;
+}
+
+/* Hats Title */
+
+.hats-title {
+  position: absolute;
+  bottom: 30px;
+  left: 540px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 6px;
+}
+
+.hats-title h1 {
+  font-size: 100px;
+}
+
+.hats-title::after {
+  content: "lifetime";
+  font-size: 134px;
+  font-weight: 600;
+}
+
+/* Social Icons */
+.social-icons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.social-icons i {
+  color: #ffffff;
+  font-size: 35px;
+  padding: 10px;
+}
