@@ -1,0 +1,222 @@
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page Container */
+.page-main-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-image: url("../assests/images/bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* Stage Container */
+.stage {
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
+  top: 160px;
+}
+
+/* Ball Container */
+.ball-container {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* Ball */
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  animation: rotate 10s linear 0.5s infinite normal;
+  background-image: url("../assests/images/tyre.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+#ball1 {
+  left: 70px;
+  z-index: 14;
+}
+
+#ball2 {
+  left: 180px;
+  z-index: 12;
+}
+
+#ball3 {
+  left: 520px;
+  z-index: 10;
+}
+
+/* Truck Container */
+.box-container {
+  width: 700px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  background-image: url("../assests/images/truck.png");
+  background-position: center;
+  background-size: cover;
+  animation: move 10s linear 0.5s infinite normal;
+  z-index: 10;
+}
+
+/* CDW Text */
+.box-container h1 {
+  position: absolute;
+  bottom: 36px;
+  left: 100px;
+  font-family: sans-serif;
+  font-size: 100px;
+  letter-spacing: 10px;
+}
+
+/* Man Walk */
+.people {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  animation: walk 30s linear 0.5s infinite normal;
+  z-index: 20;
+}
+
+.people img {
+  transform: scaleX(-1);
+}
+
+/* Bird Fly */
+.bird {
+  position: absolute;
+  top: 15px;
+  animation: move 50s linear 0.5s infinite normal;
+}
+
+.bird img {
+  width: 100px;
+}
+
+/* Wheel Rotate Move Animation */
+@keyframes rotate {
+  0% {
+    transform: translateX(-1vw) rotate(0deg);
+  }
+  10% {
+    transform: translateX(10vw) rotate(36deg);
+  }
+  20% {
+    transform: translateX(20vw) rotate(72deg);
+  }
+  30% {
+    transform: translateX(30vw) rotate(108deg);
+  }
+  40% {
+    transform: translateX(40vw) rotate(144deg);
+  }
+  50% {
+    transform: translateX(50vw) rotate(180deg);
+  }
+  60% {
+    transform: translateX(60vw) rotate(216deg);
+  }
+  70% {
+    transform: translateX(70vw) rotate(252deg);
+  }
+  80% {
+    transform: translateX(80vw) rotate(288deg);
+  }
+  90% {
+    transform: translateX(90vw) rotate(324deg);
+  }
+  100% {
+    transform: translateX(100vw) rotate(360deg);
+  }
+}
+
+/* Bird Move Animation */
+@keyframes move {
+  0% {
+    transform: translateX(-1vw);
+  }
+  10% {
+    transform: translateX(10vw);
+  }
+  20% {
+    transform: translateX(20vw);
+  }
+  30% {
+    transform: translateX(30vw);
+  }
+  40% {
+    transform: translateX(40vw);
+  }
+  50% {
+    transform: translateX(50vw);
+  }
+  60% {
+    transform: translateX(60vw);
+  }
+  70% {
+    transform: translateX(70vw);
+  }
+  80% {
+    transform: translateX(80vw);
+  }
+  90% {
+    transform: translateX(90vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+/* Man Move Animation */
+
+@keyframes walk {
+  0% {
+    transform: translateX(100vw);
+  }
+  10% {
+    transform: translateX(90vw);
+  }
+  20% {
+    transform: translateX(80vw);
+  }
+  30% {
+    transform: translateX(70vw);
+  }
+  40% {
+    transform: translateX(60vw);
+  }
+  50% {
+    transform: translateX(50vw);
+  }
+  60% {
+    transform: translateX(40vw);
+  }
+  70% {
+    transform: translateX(30vw);
+  }
+  80% {
+    transform: translateX(20vw);
+  }
+  90% {
+    transform: translateX(10vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
