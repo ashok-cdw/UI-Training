@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pocket Notes</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Start Main Wrapper -->
+    <main class="main-page-wrapper">
+      <header class="page-header">
+        <div class="page-heading">
+          <h1><span class="previous-arrow">←</span>Pocket Notes</h1>
+        </div>
+        <div class="page-controls">
+          <button class="delete-all-note">Delete All</button>
+          <button class="new-note">New</button>
+        </div>
+      </header>
+      <section class="no-notes">
+        <div class="cube-image-wrapper">
+          <img
+            src="./assests/images/3d.png"
+            alt="3d-cube-image"
+            class="cube-image"
+          />
+        </div>
+      </section>
+      <section class="page-notes"></section>
+      <div class="add-notes-blur-effect"></div>
+
+      <div class="add-notes-wrapper">
+        <div class="add-notes-content">
+          <div class="notes-head-wrapper">
+            <div class="notes-head-title-wrapper">NEW NOTE</div>
+            <div class="notes-close-wrapper">X</div>
+          </div>
+          <div class="notes-content">
+            <div class="notes-contents notes-title-section">
+              <input type="text" placeholder="Notes Title" id="note-title" />
+            </div>
+            <div class="notes-contents">
+              <input
+                type="url"
+                placeholder="Add Image URL"
+                id="note-image-url"
+              />
+            </div>
+            <div class="notes-contents">
+              <textarea
+                placeholder="Add Content Here"
+                id="note-content"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="add-notes-bottom-wrapper">
+          <div class="colors-wrapper">
+            <div class="colors color-1">
+              <img
+                src="./assests/images/checked.png"
+                alt="color-tick"
+                class="color-tick-icon"
+              />
+            </div>
+            <div class="colors color-2">
+              <img
+                src="./assests/images/checked.png"
+                alt="color-tick"
+                class="color-tick-icon"
+              />
+            </div>
+            <div class="colors color-3">
+              <img
+                src="./assests/images/checked.png"
+                alt="color-tick"
+                class="color-tick-icon"
+              />
+            </div>
+            <div class="colors color-4">
+              <img
+                src="./assests/images/checked.png"
+                alt="color-tick"
+                class="color-tick-icon"
+              />
+            </div>
+            <div class="colors color-5">
+              <img
+                src="./assests/images/checked.png"
+                alt="color-tick"
+                class="color-tick-icon"
+              />
+            </div>
+          </div>
+          <div class="add-note-button-wrapper">
+            <button class="add-note-btn" disabled>ADD</button>
+          </div>
+        </div>
+      </div>
+      <div class="load-more-wrapper">
+        <button class="load-more">LOAD MORE</button>
+      </div>
+
+      <div class="notes-detail-wrapper">
+        <div class="notes-detail-left">
+          <div class="notes-detail-color"></div>
+        </div>
+        <div class="notes-detail-right">
+          <div class="notes-detail-head">
+            <div class="notes-detail-title">
+            </div>
+            <div class="notes-detail-date"></div>
+          </div>
+          <div class="notes-detail-img">
+            <img src="https://picsum.photos/1024/300" alt="notes-image" />
+          </div>
+          <div class="notes-detail-content">
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-wrapper">
+        <div class="notes-modal">
+          <div class="modal-header">
+            <div class="modal-title"></div>
+            <div class="modal-close">X</div>
+          </div>
+          <div class="modal-content"></div>
+          <div class="modal-confirm-btn">
+            <button class="modal-success"></button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- End Main Wrapper -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
