@@ -199,7 +199,9 @@ $(".add-note-btn").on("click", function () {
         $("#note-content").val("");
 
         // Closing Wrapper
-        $(".notes-close-wrapper").click();
+        $(".add-notes-wrapper").hide(200);
+        $(".add-notes-blur-effect").hide();
+        $('body').css('overflow', 'auto');
 
         // Regenerating Cards
         $(".page-notes").empty();
@@ -235,7 +237,9 @@ $(".add-note-btn").on("click", function () {
         $(".add-note-btn").text("ADD");
 
         // Closing Wrapper
-        $(".notes-close-wrapper").click();
+        $(".add-notes-wrapper").hide(200);
+        $(".add-notes-blur-effect").hide();
+        $('body').css('overflow', 'auto');
 
         $(".previous-arrow").click();
     }

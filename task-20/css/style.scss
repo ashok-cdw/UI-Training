@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 * {
   margin: 0;
@@ -15,7 +15,7 @@ $red: #9a1e14;
 
 $colors: (#e6cdea, #fcfcfc, #f7cc7f, #e6ed9b, #f3ab91);
 
-$head-family: "IBM Plex Sans", sans-serif;
+$head-family: "IBM Plex Serif", serif;
 $body-family: "Lato", sans-serif;
 
 @mixin button-style {
